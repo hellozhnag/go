@@ -29,7 +29,7 @@ func main() {
 	fmt.Println(course) //[java grpc gin]
 
 	/*
-		type slice struct {
+		type slice mystruct {
 			array unsafe.Pointer //用来存储实际数据的数组指针，指向一块连续的内存
 			len   int            //切片中元素数量
 			cap   int            //array数组的长度

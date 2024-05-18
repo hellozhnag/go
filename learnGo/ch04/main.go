@@ -50,7 +50,7 @@ func main() {
 
 	/*
 		4、for range的循环用法
-		主要是对字符串、数组、切片、map、channel
+		主要是对字符串、数组、切片、mymap、channel
 	*/
 	name := "hi耶,go"
 	//字符串的索引（key）、字符串对应的索引的字符值的拷贝（value）
