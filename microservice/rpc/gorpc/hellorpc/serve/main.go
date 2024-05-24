@@ -2,6 +2,7 @@ package main
 
 import (
 	"io"
+	"microservice/rpc/gorpc/hellorpc/hanlder"
 	"net/http"
 	"net/rpc"
 	"net/rpc/jsonrpc"
@@ -16,7 +17,7 @@ func (s *HelloService) Hello(request string, reply *string) error {
 }
 
 func main() {
-	_ = rpc.RegisterName("HelloService", &HelloService{})
+	_ = rpc.RegisterName(hanlder.HelloServiceName, &HelloService{})
 	http.HandleFunc("/jsonrpc", func(w http.ResponseWriter, r *http.Request) {
 		var conn io.ReadWriteCloser = struct {
 			io.Writer
